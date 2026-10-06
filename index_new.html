@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>IEEE InnovateX 2026</title>
+<meta name="description" content="IEEE InnovateX 2026, organised by the IEEE IAS and RAS chapters. Keynotes, a hands-on workshop and a demo showcase.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,800&family=Instrument+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--ink:#0A2540;--blue:#00629B;--amber:#F2A900;--paper:#F4F8FB;--white:#fff;--muted:#4A5F75;--line:#d7e2ec;
+--head:'Bricolage Grotesque',system-ui,sans-serif;--body:'Instrument Sans',system-ui,sans-serif}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-padding-top:5rem}
+body{font-family:var(--body);color:var(--ink);background:var(--paper);line-height:1.65;font-size:1.05rem}
+img{max-width:100%;display:block}
+a:focus-visible{outline:3px solid var(--amber);outline-offset:3px}
+.wrap{width:min(1100px,92%);margin-inline:auto}
+
+
+.bar{position:sticky;top:0;z-index:10;background:rgba(255,255,255,.96);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+.bar .wrap{display:flex;align-items:center;justify-content:space-between;gap:1rem;padding:.6rem 0}
+.logos{display:flex;align-items:center;gap:clamp(.6rem,2vw,1.4rem)}
+.logos figure{display:flex;align-items:center;gap:.5rem}
+.logos img{height:clamp(30px,5vw,46px);width:auto}
+.logos figcaption{font-size:.72rem;line-height:1.2;color:var(--muted);font-weight:600;max-width:6.5rem}
+.logos .sep{width:1px;height:30px;background:var(--line)}
+nav{display:flex;gap:1.5rem}
+nav a{color:var(--ink);text-decoration:none;font-weight:500}
+nav a:hover{color:var(--blue)}
+
+
+.hero{position:relative;background:linear-gradient(135deg,#0A2540 0%,#0b3558 60%,#00629B 140%);color:var(--white);overflow:hidden;padding:clamp(4rem,10vw,7.5rem) 0}
+.hero svg{position:absolute;right:0;top:0;height:100%;width:70%;opacity:.55}
+.hero .wrap{position:relative;animation:rise .8s ease-out both}
+.kicker{color:#b9cde0;margin-bottom:1rem;font-weight:500}
+.hero h1{font-family:var(--head);font-weight:800;font-size:clamp(3rem,11vw,7rem);line-height:.95;letter-spacing:-.035em}
+.hero h1 span{display:block;color:var(--amber)}
+.lead{max-width:34rem;margin:1.5rem 0 2rem;font-size:1.2rem;color:#dbe7f2}
+.cta{display:flex;flex-wrap:wrap;align-items:center;gap:1.2rem}
+.btn{display:inline-block;background:var(--amber);color:var(--ink);font-weight:600;font-size:1.1rem;padding:1rem 2.2rem;border-radius:999px;text-decoration:none;box-shadow:0 8px 24px rgba(242,169,0,.35);transition:transform .15s,background .15s}
+.btn:hover{background:#ffc233;transform:translateY(-2px)}
+.ghost{color:var(--white);font-weight:600;text-decoration:underline;text-underline-offset:5px}
+.facts{display:flex;flex-wrap:wrap;gap:.7rem;margin-top:2.5rem;list-style:none}
+.facts li{border:1px solid rgba(255,255,255,.3);border-radius:999px;padding:.35rem 1rem;font-size:.95rem;color:#e8f0f7}
+@keyframes rise{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:none}}
+
+
+section{padding:clamp(3.5rem,8vw,6rem) 0}
+h2{font-family:var(--head);font-size:clamp(2rem,4.5vw,3rem);letter-spacing:-.02em;line-height:1.1;margin-bottom:.6rem}
+.sub{color:var(--muted);margin-bottom:2.5rem;max-width:36rem}
+
+
+.timeline{list-style:none;display:grid;gap:1rem}
+.timeline li{display:grid;grid-template-columns:9rem 1fr;gap:1rem;background:var(--white);border:1px solid var(--line);border-left:6px solid var(--blue);border-radius:14px;padding:1.3rem 1.5rem}
+.timeline li:nth-child(even){border-left-color:var(--amber)}
+.timeline time{font-family:var(--head);font-weight:800;font-size:1.25rem;color:var(--blue)}
+.timeline h3{font-family:var(--head);font-size:1.3rem;line-height:1.25;margin-bottom:.2rem}
+.timeline p{color:var(--muted)}
+
+
+.speakers{background:var(--white);border-block:1px solid var(--line)}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:1.5rem}
+.card{background:var(--paper);border:1px solid var(--line);border-top:6px solid var(--blue);border-radius:18px;padding:2rem 1.8rem}
+.card:nth-child(2){border-top-color:var(--amber)}
+.avatar{width:92px;height:92px;border-radius:50%;background:var(--ink);color:var(--white);display:grid;place-items:center;font-family:var(--head);font-weight:800;font-size:2rem;margin-bottom:1.2rem;box-shadow:0 0 0 5px var(--paper),0 0 0 7px var(--blue)}
+.card:nth-child(2) .avatar{background:var(--blue);box-shadow:0 0 0 5px var(--paper),0 0 0 7px var(--amber)}
+.card h3{font-family:var(--head);font-size:1.6rem;line-height:1.2}
+.role{color:var(--blue);font-weight:600;margin:.2rem 0 .8rem}
+.card p:last-child{color:var(--muted)}
+
+
+footer{position:relative;background:url("assets/footer.jpg") center/cover no-repeat,linear-gradient(135deg,#0A2540,#00629B);color:var(--white);padding:clamp(4rem,9vw,6.5rem) 0 1.5rem}
+footer::before{content:"";position:absolute;inset:0;background:linear-gradient(to top,rgba(10,37,64,.95),rgba(10,37,64,.5))}
+footer .wrap{position:relative;display:grid;grid-template-columns:1.4fr 1fr;gap:2rem}
+footer h2{font-size:2rem}
+footer p,footer a{color:#dbe7f2}
+footer ul{list-style:none;display:grid;gap:.4rem}
+footer a{text-decoration:none}footer a:hover{color:var(--amber)}
+.copy{grid-column:1/-1;border-top:1px solid rgba(255,255,255,.25);padding-top:1rem;font-size:.9rem}
+
+@media (max-width:700px){
+  nav,.logos figcaption{display:none}
+  .timeline li{grid-template-columns:1fr;gap:.2rem}
+  footer .wrap{grid-template-columns:1fr}
+  .hero svg{width:100%;opacity:.3}
+}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}.hero .wrap{animation:none}.btn{transition:none}}
+</style>
+</head>
+<body>
+
+<header class="bar">
+  <div class="wrap">
+    <div class="logos">
+      <figure><img src="D:\files polished\ieee logo.jpg" alt="IEEE logo"></figure>
+      <span class="sep" aria-hidden="true"></span>
+      <figure><img src="D:\files polished\ieee logo.jpg" alt="IEEE Industry Applications Society logo"><figcaption>Industry Applications Society</figcaption></figure>
+      <span class="sep" aria-hidden="true"></span>
+      <figure><img src="D:\files polished\image.jpg" alt="IEEE Robotics and Automation Society logo"></figure>
+    </div>
+    <nav aria-label="Main"><a href="#schedule">Schedule</a><a href="#speakers">Speakers</a><a href="#register">Register</a></nav>
+  </div>
+</header>
+
+<main>
+  <section class="hero" aria-labelledby="title">
+    <svg viewBox="0 0 800 400" preserveAspectRatio="xMaxYMid slice" fill="none" stroke="#2f8fc4" stroke-width="2" aria-hidden="true">
+      <path d="M800 60H620l-40 40H470M800 140H660l-30 30H540l-30 30H400M800 230H700l-50 50H520M800 320H610l-30-30H430M800 20H700l-20 20"/>
+      <g fill="#F2A900" stroke="none"><circle cx="470" cy="100" r="6"/><circle cx="400" cy="200" r="6"/><circle cx="520" cy="280" r="6"/><circle cx="430" cy="290" r="6"/></g>
+    </svg>
+    <div class="wrap">
+      <p class="kicker">Organised by IEEE IAS and RAS, MITS Gwalior</p>
+      <h1 id="title">IEEE <span>InnovateX 2026</span></h1>
+      <p class="lead">A day of keynotes, a hands-on workshop and a demo showcase for students who want to build things that work.</p>
+      <div class="cta">
+        <a class="btn" href="#" id="register">Register now</a>
+        <a class="ghost" href="#schedule">See the schedule</a>
+      </div>
+      <ul class="facts"><li>1 day</li><li>4 sessions</li><li>2 keynotes</li></ul>
+    </div>
+  </section>
+
+  <section id="schedule" aria-labelledby="sched-h">
+    <div class="wrap">
+      <h2 id="sched-h">Event schedule</h2>
+      <p class="sub">Four sessions across the day. Final timings will be confirmed on registration.</p>
+      <ol class="timeline">
+        <li><time>10:00 AM</time><div><h3>Inauguration and welcome</h3><p>Opening remarks from the IEEE student branch and faculty advisors.</p></div></li>
+        <li><time>11:00 AM</time><div><h3>Keynote talks</h3><p>Dr. Aris Thorne and Dr. Elena Vance on automation and robotics.</p></div></li>
+        <li><time>02:00 PM</time><div><h3>Hands-on workshop</h3><p>Build and program a small robotics or control project in teams.</p></div></li>
+        <li><time>05:00 PM</time><div><h3>Demo showcase and awards</h3><p>Teams present their projects and the best builds are recognised.</p></div></li>
+      </ol>
+    </div>
+  </section>
+
+  <section id="speakers" class="speakers" aria-labelledby="speak-h">
+    <div class="wrap">
+      <h2 id="speak-h">Keynote speakers</h2>
+      <p class="sub">Two researchers who work on the problems we will be discussing.</p>
+      <div class="grid">
+        <article class="card">
+          <div class="avatar" aria-hidden="true">AT</div>
+          <h3>Dr. Aris Thorne</h3>
+          <p class="role">Keynote speaker</p>
+          <p>Explores how modern industrial systems use control and automation to run safely and efficiently.</p>
+        </article>
+        <article class="card">
+          <div class="avatar" aria-hidden="true">EV</div>
+          <h3>Dr. Elena Vance</h3>
+          <p class="role">Keynote speaker</p>
+          <p>Explores how robots perceive, plan and act in real environments outside the lab.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer id="footer">
+  <div class="wrap">
+    <div><h2>IEEE InnovateX 2026</h2><p>MITS Gwalior, Madhya Pradesh</p></div>
+    <ul><li><a href="#register">Register now</a></li><li><a href="#schedule">Schedule</a></li><li><a href="#speakers">Speakers</a></li></ul>
+    <p class="copy">&copy; 2026 IEEE Student Branch, MITS Gwalior. IEEE, IAS and RAS names and logos belong to their respective owners.</p>
+  </div>
+</footer>
+
+</body>
+</html>
